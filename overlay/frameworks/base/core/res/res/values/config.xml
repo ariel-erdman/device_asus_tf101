@@ -238,9 +238,18 @@
 
     <!-- Asus Dock Compatiblity should be enabled -->
     <bool name="config_hasDockBattery">true</bool>  
+<<<<<<< HEAD
        <string name="config_deviceHandlersLib" translatable="false">/system/framework/com.cyanogenmod.asusdec.jar</string>
     <string name="config_deviceDockBatteryHandlerClass" translatable="false">com.cyanogenmod.asusdec.DockBatteryHandler</string>
     <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.asusdec.KeyHandler</string>
+=======
+       <add-resource type="string" name="config_deviceHandlersLib"></add-resource>
+       <string name="config_deviceHandlersLib" translatable="false">/system/framework/com.android.asusdec.jar</string>
+    <add-resource type="string" name="config_deviceDockBatteryHandlerClass"></add-resource>
+    <string name="config_deviceDockBatteryHandlerClass" translatable="false">com.android.asusdec.DockBatteryHandler</string>
+    <add-resource type="string" name="config_deviceKeyHandlerClass"></add-resource>
+    <string name="config_deviceKeyHandlerClass" translatable="false">com.android.asusdec.KeyHandler</string>
+>>>>>>> 391e6e2... Add resources by default
 </resources>
 
     <!--NOTE: You might have an error which asks you to <add-resource> during building the ROM. The codes starting from "config_desiredWallpaper" are causing it. I cherry picked it from TeamEOS device tree. Go to the /frameworks/base/core/res/res/values/config.xml and paste those codes to get it working --> 

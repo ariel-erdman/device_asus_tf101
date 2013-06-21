@@ -1,4 +1,4 @@
-package com.android.settings.device;
+package org.teameos.settings.device;
 
 import java.io.File;
 import java.io.FileNotFoundException;
