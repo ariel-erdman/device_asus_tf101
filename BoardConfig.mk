@@ -107,3 +107,6 @@ BOARD_USES_OVERLAY := true
 BOARD_EGL_NEEDS_LEGACY_FB := true
 BOARD_EGL_CFG := device/asus/tf101/prebuilt/lib/hw/egl.cfg
 USE_OPENGL_RENDERER := true
+
+# Linaro Toolchain
+TARGET_GCC_VERSION := 4.7.4
