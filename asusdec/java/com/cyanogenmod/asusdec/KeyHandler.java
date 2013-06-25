@@ -149,7 +149,6 @@ public final class KeyHandler implements DeviceKeyHandler {
         }
     };
 
-    @Override
     public boolean handleKeyEvent(KeyEvent event) {
 
         if (DEBUG_KEYEVENT) {
@@ -367,7 +366,6 @@ public final class KeyHandler implements DeviceKeyHandler {
     ServiceConnection mScreenshotConnection = null;
 
     final Runnable mScreenshotTimeout = new Runnable() {
-        @Override
         public void run() {
             synchronized (mScreenshotLock) {
                 if (mScreenshotConnection != null) {
