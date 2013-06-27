@@ -58,6 +58,10 @@ Usage:  ota_from_target_files [flags] input_target_files output_ota_package
 
   --override_device <device>
       Override device-specific asserts. Can be a comma-separated list.
+   
+  --no_assert <true|false>
+    Including this will turn device asserts off.
+
 
 
 """
@@ -98,6 +102,7 @@ OPTIONS.aslr_mode = True
 OPTIONS.worker_threads = 3
 OPTIONS.backuptool = True
 OPTIONS.override_device = 'auto'
+OPTIONS.no_assert = False
 
 LOCAL_DIR = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 DEV_ANDROID_OUT_DIR = os.getenv("ANDROID_PRODUCT_OUT")
@@ -405,13 +410,15 @@ def WriteFullOTAPackage(input_zip, output_zip):
   #  ts = GetBuildProp("ro.build.date.utc", OPTIONS.info_dict)
   #  script.AssertOlderBuild(ts)
 
-  AppendAssertions(script, OPTIONS.info_dict)
-  device_specific.FullOTA_Assertions()
   if OPTIONS.backuptool:
     script.RunBackup("backup")
   device_specific.FullOTA_InstallBegin()
 
   script.ShowProgress(0.5, 0)
+
+  if not OPTIONS.no_assert:
+    AppendAssertions(script, input_zip)
+    device_specific.FullOTA_Assertions()
 
   if OPTIONS.wipe_user_data:
     script.FormatPartition("/data")
@@ -593,7 +600,8 @@ def WriteIncrementalOTAPackage(target_zip, source_zip, output_zip):
   #  0.1 for unpacking verbatim files, symlinking, and doing the
   #      device-specific commands.
 
-  AppendAssertions(script, target_zip)
+  if OPTIONS.no_assert:
+     AppendAssertions(script, target_zip)
   device_specific.IncrementalOTA_Assertions()
 
   script.Print("Verifying current system...")
@@ -782,6 +790,11 @@ def main(argv):
       OPTIONS.wipe_user_data = True
     elif o in ("-n", "--no_prereq"):
       OPTIONS.omit_prereq = True
+    elif o in ("--no_assert"):
+      if a in ("on", "On", "true", "True", "yes", "Yes"):
+        OPTIONS.no_assert = True
+      else:
+        OPTIONS.no_assert = False
     elif o in ("-e", "--extra_script"):
       OPTIONS.extra_script = a
     elif o in ("-a", "--aslr_mode"):
@@ -810,7 +823,8 @@ def main(argv):
                                               "worker_threads=",
                                               "aslr_mode=",
                                               "backup=",
-					      "override_device="
+					      "override_device=",
+                                              "no_assert="
                                               ],
                              extra_option_handler=option_handler)
 
