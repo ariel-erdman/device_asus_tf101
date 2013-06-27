@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
 
 # Build asusdec
 PRODUCT_PACKAGES += \
+    com.cyanogenmod.asusdec \
     libasusdec_jni
 
 # AGPS patch
