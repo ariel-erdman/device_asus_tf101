@@ -11,5 +11,6 @@ dalvik.vm.heapgrowthlimit=64m
 dalvik.vm.heaputilization=0.25
 dalvik.vm.heapidealfree=8388608
 dalvik.vm.heapconcurrentstart=2097152
-sensor.loop.minms=0
+sensor.loop.minms=20
 orientation.magnitude.threshold=50
+ro.ethernet.autoEnable=yes
