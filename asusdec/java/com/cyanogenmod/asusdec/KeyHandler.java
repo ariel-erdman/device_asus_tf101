@@ -33,6 +33,7 @@ import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.os.SystemProperties;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
@@ -58,6 +59,8 @@ public final class KeyHandler implements DeviceKeyHandler {
     public static final String EXTRA_ASUSDEC_KEY = "key";
     public static final String EXTRA_ASUSDEC_STATUS = "status";
     public static final String EXTRA_ASUSDEC_VALUE = "value";
+
+    public static final String META_FUNCTION_KEYS_PROPERTY = "sys.asusdec.kp.fk";
 
     // Private asusdec keys values (for notification purpose)
     public static final int ASUSDEC_UNKNOWN          = -1;
@@ -426,6 +429,10 @@ public final class KeyHandler implements DeviceKeyHandler {
                 mHandler.postDelayed(mScreenshotTimeout, 10000);
             }
         }
+    }
+
+    private static long getMetaFunctionKeys() {
+        return SystemProperties.getLong(KeyHandler.META_FUNCTION_KEYS_PROPERTY, 0);
     }
 
     /*
