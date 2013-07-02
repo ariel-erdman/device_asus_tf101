@@ -67,12 +67,10 @@ public final class DockBatteryHandler implements DeviceDockBatteryHandler {
         mInitial = true;
     }
 
-    @Override
     public void update() {
         nativeDockBatteryUpdate();
     }
 
-    @Override
     public void process() {
         mDockBatteryPlugged = 0;
         if (this.mDockAcOnline || this.mAcOnline) {
@@ -98,7 +96,6 @@ public final class DockBatteryHandler implements DeviceDockBatteryHandler {
         return bundle;
     }
 
-    @Override
     public boolean hasNewData() {
         // Has anything changed?
         boolean hasNewData =
@@ -124,7 +121,6 @@ public final class DockBatteryHandler implements DeviceDockBatteryHandler {
         return hasNewData;
     }
 
-    @Override
     public boolean isPlugged() {
         return mDockBatteryPresent && mDockBatteryPlugged != 0;
     }

@@ -232,10 +232,6 @@
     <integer name="config_desiredWallpaperSizeMaxWidth">1504</integer>
     <integer name="config_desiredWallpaperSizeMaxHeight">1280</integer> 
 
-    <!-- We now need to use a constant bool as reference 
-     for whether or not this is a hybrid ui device, i.e. grouper. -->
-    <bool name="config_isHybridUiDevice">true</bool>
-
     <!-- Asus Dock Compatiblity should be enabled -->
     <bool name="config_hasDockBattery">true</bool>  
 
@@ -283,6 +279,9 @@
    	<add-resource type="integer" name="config_multiuserMaximumUsers"></add-resource>
    	<add-resource type="integer" name="config_desiredWallpaperSizeMaxWidth"></add-resource>
    	<add-resource type="integer" name="config_desiredWallpaperSizeMaxHeight"></add-resource>
+<<<<<<< HEAD
    	<add-resource type="bool" name="config_isHybridUiDevice"></add-resource>
+=======
+>>>>>>> e29dafeca6d582697f2242b2251bfd9b2f43be1b
    	<add-resource type="bool" name="config_hasDockBattery"></add-resource>
 </resources>

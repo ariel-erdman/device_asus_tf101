@@ -2,12 +2,12 @@
 $(call inherit-product, device/asus/tf101/full_tf101.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/rootbox/configs/common_tablet.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cm_tf101
+PRODUCT_NAME := rootbox_tf101
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := tf101
 PRODUCT_MODEL := Transformer Pad

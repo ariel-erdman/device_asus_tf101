@@ -50,6 +50,36 @@ public final class KeyHandler implements DeviceKeyHandler {
     private static final int MAXIMUM_BACKLIGHT = android.os.PowerManager.BRIGHTNESS_ON;
     private static final String SETTING_TOUCHPAD_STATUS = "touchpad_status";
 
+    public static final String PERMISSION_KEYPAD_RECEIVER =
+            "com.cyanogenmod.asusdec.permission.KEYPAD_RECEIVER";
+
+    public static final String ACTION_DOCK_KEYPAD_KEY_PRESSED =
+                                "com.cyanogenmod.asusdec.actions.ACTION_DOCK_KEYPAD_KEY_PRESSED";
+    public static final String EXTRA_ASUSDEC_KEY = "key";
+    public static final String EXTRA_ASUSDEC_STATUS = "status";
+    public static final String EXTRA_ASUSDEC_VALUE = "value";
+
+    // Private asusdec keys values (for notification purpose)
+    public static final int ASUSDEC_UNKNOWN          = -1;
+    public static final int ASUSDEC_WIFI             =  1;
+    public static final int ASUSDEC_BT               =  2;
+    public static final int ASUSDEC_TOUCHPAD         =  3;
+    public static final int ASUSDEC_BRIGHTNESS       =  4;
+    public static final int ASUSDEC_VOLUME           =  5;
+    public static final int ASUSDEC_VOLUME_MUTE      =  6;
+    public static final int ASUSDEC_MEDIA            =  7;
+    public static final int ASUSDEC_SCREENSHOT       =  8;
+    public static final int ASUSDEC_EXPLORER         =  9;
+    public static final int ASUSDEC_SETTINGS         = 10;
+    public static final int ASUSDEC_CAPS_LOCK        = 11;
+
+    public static final int ASUSDEC_STATUS_OFF       =  0;
+    public static final int ASUSDEC_STATUS_ON        =  1;
+
+    public static final int ASUSDEC_MEDIA_PLAY_PAUSE =  0;
+    public static final int ASUSDEC_MEDIA_PREVIOUS   =  1;
+    public static final int ASUSDEC_MEDIA_NEXT       =  2;
+
     // Use specific scan codes from device instead of aosp keycodes
     private static final int SCANCODE_TOGGLE_WIFI     = 238;
     private static final int SCANCODE_TOGGLE_BT       = 237;
@@ -58,9 +88,15 @@ public final class KeyHandler implements DeviceKeyHandler {
     private static final int SCANCODE_BRIGHTNESS_UP   = 225;
     private static final int SCANCODE_BRIGHTNESS_AUTO =  61;  // KEYCODE_F3
     private static final int SCANCODE_SCREENSHOT      = 212;
+    private static final int SCANCODE_EXPLORER        = 150;
     private static final int SCANCODE_SETTINGS        =  62;  // KEYCODE_F4
     private static final int SCANCODE_VOLUME_MUTE     = 113;  // KEYCODE_VOLUME_MUTE
-
+    private static final int SCANCODE_VOLUME_DOWN     = 114;
+    private static final int SCANCODE_VOLUME_UP       = 115;
+    private static final int SCANCODE_MEDIA_PREVIOUS  = 163;
+    private static final int SCANCODE_MEDIA_PLAY_PAUSE = 164;
+    private static final int SCANCODE_MEDIA_NEXT      = 165;
+    private static final int SCANCODE_CAPS_LOCK       = 58;
     private final Context mContext;
     private final Handler mHandler;
     private final Intent mSettingsIntent;
@@ -113,7 +149,6 @@ public final class KeyHandler implements DeviceKeyHandler {
         }
     };
 
-    @Override
     public boolean handleKeyEvent(KeyEvent event) {
 
         if (DEBUG_KEYEVENT) {
@@ -331,7 +366,6 @@ public final class KeyHandler implements DeviceKeyHandler {
     ServiceConnection mScreenshotConnection = null;
 
     final Runnable mScreenshotTimeout = new Runnable() {
-        @Override
         public void run() {
             synchronized (mScreenshotLock) {
                 if (mScreenshotConnection != null) {

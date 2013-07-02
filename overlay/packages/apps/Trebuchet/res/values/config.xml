@@ -1,5 +1,9 @@
 <resources>
     <bool name="config_largeHeap">true</bool>
+<<<<<<< HEAD
+=======
+    <bool name="config_render_wallpaper_internally">true</bool>
+>>>>>>> e29dafeca6d582697f2242b2251bfd9b2f43be1b
 
     <!-- Whether or not to use the wallpaper hack by default -->
     <bool name="config_workspaceDefaultWallpaperHack">true</bool>
