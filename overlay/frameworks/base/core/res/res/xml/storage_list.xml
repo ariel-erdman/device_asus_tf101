@@ -46,23 +46,6 @@
             android:storageDescription="@string/storage_sd_card"
             android:removable="true"
             android:maxFileSize="4096" />
-<<<<<<< HEAD
-    <!-- dock USB Port 1 -->
-    <storage android:mountPoint="/storage/usbdisk0"
-             android:storageDescription="@string/storage_usbdisk1" 
-             android:primary="false" 
-             android:removable="true" />
-    <!-- dock USB Port 2 -->
-    <storage android:mountPoint="/storage/usbdisk1"
-             android:storageDescription="@string/storage_usbdisk2" 
-             android:primary="false" 
-             android:removable="true" />
-    <!-- dock SD card -->
-    <storage android:mountPoint="/storage/sdcard2"
-             android:storageDescription="@string/storage_sdreader" 
-             android:primary="false" 
-             android:removable="true" />
-=======
      <!-- Dock SD Card -->
     <storage android:mountPoint="/storage/sdcard2"
             android:storageDescription="@string/storage_sd_dock_card"
@@ -76,5 +59,4 @@
     <storage android:mountPoint="/storage/usbdisk1"
             android:storageDescription="@string/storage_usb"
             android:removable="true" />
->>>>>>> e29dafeca6d582697f2242b2251bfd9b2f43be1b
 </StorageList>

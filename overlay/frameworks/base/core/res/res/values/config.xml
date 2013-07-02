@@ -185,7 +185,7 @@
     <!-- This device does not allow sms service. -->
     <bool name="config_sms_capable">false</bool>
 	
-	<bool name="config_hasRemovableLid">true</bool>
+    <bool name="config_hasRemovableLid">true</bool>
 
     <!-- Enable puk unlockscreen -->
     <bool name="config_enable_puk_unlock_screen">true</bool>
@@ -279,9 +279,5 @@
    	<add-resource type="integer" name="config_multiuserMaximumUsers"></add-resource>
    	<add-resource type="integer" name="config_desiredWallpaperSizeMaxWidth"></add-resource>
    	<add-resource type="integer" name="config_desiredWallpaperSizeMaxHeight"></add-resource>
-<<<<<<< HEAD
-   	<add-resource type="bool" name="config_isHybridUiDevice"></add-resource>
-=======
->>>>>>> e29dafeca6d582697f2242b2251bfd9b2f43be1b
    	<add-resource type="bool" name="config_hasDockBattery"></add-resource>
 </resources>
