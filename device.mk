@@ -146,11 +146,7 @@ PRODUCT_PACKAGES += \
     tinyplay \
     tinyrec \
     audio.primary.ventana \
-<<<<<<< HEAD
     AutoParts_tfp
-=======
-    AutoParts
->>>>>>> e29dafeca6d582697f2242b2251bfd9b2f43be1b
 
 # override
 PRODUCT_PROPERTY_OVERRIDES := \
