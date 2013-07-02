@@ -25,6 +25,7 @@
 
     <CheckBoxPreference android:key="cpu_set_on_boot"
         android:title="@string/cpu_set_on_boot_title"
-        android:summary="@string/cpu_set_on_boot_summary" />
+        android:summary="@string/cpu_set_on_boot_summary"
+        android:defaultValue="false"  />
 
 </PreferenceScreen>

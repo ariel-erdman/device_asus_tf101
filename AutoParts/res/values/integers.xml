@@ -15,11 +15,5 @@
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <string name="app_name">Asus Transformer Infinity Einstellungen</string>
-    <string name="cpu_settings_title">CPU</string>
-    <string name="cpu_mode_title">CPU-Modus</string>
-    <string name="cpu_settings_summary">Ändert den CPU-Modus</string>
-    <string name="cpu_pwrsv">Energiesparen</string>
-    <string name="cpu_bal">Ausbalanciert</string>
-    <string name="cpu_perf">Leistung</string>
+    <integer name="kp_notification_timeout">3000</integer>
 </resources>
