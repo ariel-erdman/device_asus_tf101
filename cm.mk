@@ -2,7 +2,7 @@
 $(call inherit-product, device/asus/tf101/full_tf101.mk)
 
 # Inherit some common Paranoid Android stuff.
-$(call inherit-product, vendor/pa/config/pa_common.mk)
+$(call inherit-product, vendor/pa/config/common_tablet.mk)
 
 #
 # Setup device specific product configuration.
