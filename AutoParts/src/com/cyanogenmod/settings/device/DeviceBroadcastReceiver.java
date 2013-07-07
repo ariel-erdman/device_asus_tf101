@@ -31,6 +31,7 @@ import android.util.Log;
 
 import com.cyanogenmod.asusdec.DockEmbeddedController;
 import com.cyanogenmod.asusdec.KeyHandler;
+import com.cyanogenmod.settings.device.R;
 
 import java.util.Date;
 

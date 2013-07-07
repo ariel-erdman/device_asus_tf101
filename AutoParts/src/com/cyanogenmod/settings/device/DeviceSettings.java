@@ -40,6 +40,7 @@ import android.widget.Toast;
 
 import com.cyanogenmod.asusdec.DockEmbeddedController;
 import com.cyanogenmod.settings.device.DockUtils;
+import com.cyanogenmod.settings.device.R;
 
 import java.text.DateFormat;
 import java.util.Date;

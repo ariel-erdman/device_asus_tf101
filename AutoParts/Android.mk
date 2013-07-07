@@ -7,7 +7,6 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_SRC_FILES += $(call all-java-files-under, ../asusdec/java)
 
 LOCAL_PACKAGE_NAME := AutoParts_tfp
-LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 LOCAL_CERTIFICATE := platform
 
 include $(BUILD_PACKAGE)
