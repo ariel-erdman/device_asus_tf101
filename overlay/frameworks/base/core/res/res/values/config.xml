@@ -232,9 +232,9 @@
     <integer name="config_multiuserMaximumUsers">8</integer>
 
     <!-- Asus Dock Compatiblity should be enabled -->
-    <bool name="config_hasDockBattery">true</bool>
-	<string name="config_deviceHandlersLib" translatable="false">/system/framework/com.cyanogenmod.asusdec.jar</string>
-	<add-resource type="string" name="config_deviceHandlersLib"></add-resource>
+    <bool name="config_hasDockBattery">true</string>
+    <string name="config_deviceHandlersLib" translatable="false">/system/framework/com.cyanogenmod.asusdec.jar</string>
+    <add-resource type="string" name="config_deviceHandlersLib"></add-resource>
     <string name="config_deviceDockBatteryHandlerClass" translatable="false">com.cyanogenmod.asusdec.DockBatteryHandler</string>
     <add-resource type="string" name="config_deviceDockBatteryHandlerClass"></add-resource>
     <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.asusdec.KeyHandler</string>
