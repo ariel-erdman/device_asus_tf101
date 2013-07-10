@@ -146,7 +146,8 @@ PRODUCT_PACKAGES += \
     tinyplay \
     tinyrec \
     audio.primary.ventana \
-    AutoParts_tfp
+    AutoParts_tfp \
+    Trebuchet
 
 # override
 PRODUCT_PROPERTY_OVERRIDES := \
