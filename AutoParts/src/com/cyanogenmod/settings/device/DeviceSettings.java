@@ -424,5 +424,4 @@ public class DeviceSettings extends PreferenceActivity {
             mLtoDownloadNowPref.setSummary(summary);
         }
     }
-
 }

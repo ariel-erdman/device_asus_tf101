@@ -27,4 +27,19 @@
     <header
       android:fragment="com.cyanogenmod.settings.device.DeviceSettings$GpsSettingsFragment"
       android:title="@string/gps_settings_title" />
+    <header 
+        android:title="@string/katapp">
+        <intent 
+            android:targetPackage="org.meerkats.kat" 
+            android:action="android.intent.action.MAIN" 
+            android:targetClass="org.meerkats.kat.mainmenu.MenuListActivity" />
+    </header>
+    <header 
+        android:title="@string/trebuchet_settings">
+        <intent 
+            android:targetPackage="com.cyanogenmod.trebuchet" 
+            android:action="android.intent.action.MAIN" 
+            android:targetClass="com.cyanogenmod.trebuchet.preference.Preferences" />
+    </header>
+
 </preference-headers>
