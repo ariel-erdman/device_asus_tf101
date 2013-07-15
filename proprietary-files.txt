@@ -106,4 +106,3 @@ usr/share/alsa/pcm/surround40.conf
 usr/share/alsa/pcm/surround41.conf
 usr/share/alsa/pcm/surround50.conf
 usr/share/alsa/pcm/surround51.conf
-usr/share/alsa/pcm/surround71.conf
