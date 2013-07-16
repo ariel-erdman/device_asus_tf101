@@ -18,7 +18,7 @@
 $(call inherit-product, vendor/rootbox/configs/common.mk)
 
 #PA OVERLAY_TARGET
-OVERLAY_TARGET := pa_hdpi
+OVERLAY_TARGET := pa_tf101
 
 # camera
 PRODUCT_PACKAGES := \
@@ -41,8 +41,8 @@ PRODUCT_COPY_FILES += \
     device/asus/tf101/prebuilt/etc/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
 
 # Copy bootanimation.zip
-#PRODUCT_COPY_FILES += \
-#    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip
+PRODUCT_COPY_FILES += \
+    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip
 
 # device
 $(call inherit-product, device/asus/tf101/device.mk)
