@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+# Inherit RootBox common bits
+$(call inherit-product, vendor/rootbox/configs/common.mk)
+
+#PA OVERLAY_TARGET
+OVERLAY_TARGET := pa_hdpi
+
 # camera
 PRODUCT_PACKAGES := \
 	HoloSpiralWallpaper \
@@ -33,6 +39,10 @@ PRODUCT_COPY_FILES += \
     device/asus/tf101/prebuilt/etc/gps.conf:system/etc/gps.conf \
     device/asus/tf101/prebuilt/etc/SuplRootCert:system/etc/SuplRootCert \
     device/asus/tf101/prebuilt/etc/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
+
+# Copy bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip
 
 # device
 $(call inherit-product, device/asus/tf101/device.mk)
