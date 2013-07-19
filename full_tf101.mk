@@ -14,14 +14,20 @@
 # limitations under the License.
 #
 
-# Inherit RootBox common bits
-$(call inherit-product, vendor/rootbox/configs/common.mk)
+# Inherit AOSP device configuration for tf101
+#$(call inherit-product, device/asus/tf101/full_tf101.mk)
+
+# Inherit themes common bits
+$(call inherit-product, vendor/rootbox/configs/themes_common.mk)
+
+# Inherit RootBox common_tablet bits
+$(call inherit-product, vendor/rootbox/configs/common_tablet.mk)
 
 #PA OVERLAY_TARGET
 OVERLAY_TARGET := pa_tf101
 
 # camera
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
 	HoloSpiralWallpaper \
 	LiveWallpapersPicker \
 	VisualizationWallpapers \
