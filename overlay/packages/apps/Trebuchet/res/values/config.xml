@@ -1,5 +1,6 @@
 <resources>
     <bool name="config_largeHeap">true</bool>
+    <add-resource type="bool" name="config_render_wallpaper_internally"></add-resource> 
     <bool name="config_render_wallpaper_internally">true</bool>
 
     <!-- Whether or not to use the wallpaper hack by default -->
