@@ -55,7 +55,8 @@ then
     # copy overrides
     echo -e "${bldblu}Copying overrides ${txtrst}"
     cp device/asus/tf101/full_tf101.mk vendor/rootbox/products
-    cp device/asus/tf101/overrides/pa_tf101.conf vendor/rootbox/prebuilt
+    cp device/asus/tf101/overrides/paranoid/pa_tf101.conf vendor/rootbox/prebuilt
+    cp -Rf device/asus/tf101/overrides/paranoid/pa_tf101 vendor/rootbox/prebuilt/preferences
     cp device/asus/tf101/overrides/frameworks/base/core/java/android/os/BatteryManager.java frameworks/base/core/java/android/os
     cp device/asus/tf101/overrides/frameworks/base/core/java/com/android/internal/os/Device* frameworks/base/core/java/com/android/internal/os
     echo -e ""
