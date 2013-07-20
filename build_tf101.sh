@@ -15,7 +15,7 @@ bldblu=${txtbld}$(tput setaf 4) #  blue
 bldcya=${txtbld}$(tput setaf 6) #  cyan
 txtrst=$(tput sgr0)             # Reset
 
-DEVICE="full_tf101-userdebug"
+DEVICE="tf101-userdebug"
 SYNC="$1"
 THREADS="$2"
 CLEAN="$3"
@@ -54,7 +54,8 @@ then
    
     # copy overrides
     echo -e "${bldblu}Copying overrides ${txtrst}"
-    cp device/asus/tf101/full_tf101.mk vendor/rootbox/products
+    cp device/asus/tf101/overrides/tf101 vendor/rootbox/products/tf101.mk
+    cp device/asus/tf101/overrides/AndroidProducts vendor/rootbox/products/AndroidProducts.mk
     cp device/asus/tf101/overrides/paranoid/pa_tf101.conf vendor/rootbox/prebuilt
     cp -Rf device/asus/tf101/overrides/paranoid/pa_tf101 vendor/rootbox/prebuilt/preferences
     cp device/asus/tf101/overrides/frameworks/base/core/java/android/os/BatteryManager.java frameworks/base/core/java/android/os

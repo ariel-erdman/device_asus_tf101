@@ -61,7 +61,7 @@ PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # product
-PRODUCT_NAME := full_tf101
+PRODUCT_NAME := tf101
 PRODUCT_DEVICE := tf101
 PRODUCT_BRAND := asus
 PRODUCT_MANUFACTURER := Asus
